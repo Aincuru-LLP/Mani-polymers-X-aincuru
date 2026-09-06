@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: mani-polymers-platform
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_EMAIL
+        value: maniadmin@mani.com
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: PORT
+        value: 5000

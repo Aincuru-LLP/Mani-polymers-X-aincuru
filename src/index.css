@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FAFAFA;
+    color: #111111;
+  }
+
+  /* Subtle SVG Film Grain Overlay to eliminate flat artificial digital look */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Brutalist Luxury Surface Colors */
+.bg-alabaster {
+  background-color: #FAFAFA !important;
+}
+
+.bg-onyx {
+  background-color: #111111 !important;
+}
+
+.bg-charcoal {
+  background-color: #191919 !important;
+}
+
+/* 1px Hairline Borders */
+.border-hairline {
+  border: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.border-hairline-dark {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Floating Label Minimal Input */
+.floating-input-group {
+  position: relative;
+  padding-top: 1rem;
+}
+
+.floating-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #D4D4D4;
+  padding: 0.6rem 0;
+  font-size: 0.925rem;
+  color: #111111;
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.floating-input:focus {
+  border-bottom: 1px solid #111111;
+}
+
+.floating-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #737373;
+  font-weight: 500;
+  pointer-events: none;
+}
