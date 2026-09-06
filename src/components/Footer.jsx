@@ -75,10 +75,28 @@ export default function Footer({ onNavigateAdmin }) {
         </div>
 
         {/* Bottom Colophon */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-neutral-500">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 font-mono text-xs text-neutral-500">
           <p>
             &copy; {new Date().getFullYear()} MANI POLYMERS. ALL RIGHTS RESERVED.
           </p>
+
+          {/* Designed by Aincuru */}
+          <a
+            href="https://www.aincuru.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 px-3 py-1.5 border border-neutral-800 hover:border-neutral-600 bg-[#161616] hover:bg-[#1f1f1f] transition-all duration-200 group rounded-none"
+            title="Aincuru - Context Creates Intelligence"
+          >
+            <span className="text-[10px] uppercase tracking-widest text-neutral-400 group-hover:text-neutral-200 transition-colors">
+              Designed by
+            </span>
+            <img
+              src="/images/aincuru-logo-light.png"
+              alt="Aincuru"
+              className="h-5 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+          </a>
 
           <div className="flex items-center gap-6">
             <button
